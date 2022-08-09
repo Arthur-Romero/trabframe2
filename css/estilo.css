@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --cor-azul-escuro:#7B68EE;
+    --cor-azul-claro:#ADD8E6;
+    --cor-cinza-escuro:#1C1C1C;
+    --cor-preto:#000000;
+    --cor-verde-claro:#ADFF2F;
+    --cor-verde-escuro:#006400;
+    --cor-roxo:#C71585;
+
+}
+body{
+    background-color:   #E6E6FA;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+.letter-spacing{
+    letter-spacing: 5px;
+}
+.flex{
+    display: flex;
+}
+#perfil{
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+}
+#perfil img{
+    width: 100%;
+
+}
+
+#titulo{
+    align-items: center;
+    height: 90px;
+    justify-content: center;
+}
+#titulo img{
+    height: 30px;
+    margin-right: 10px;
+}
+#nome{
+    align-items: center;
+    flex-direction: column;
+    height: 230px;
+    justify-content: center;
+}
+#bio{
+    width: 100vw;
+}
+.titulo-bio{
+    background-color: var(--cor-azul-escuro);
+    border-top: solid 3px var(--cor-azul-claro);
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+.coluna-bio{
+    padding: 2rem;
+}
+section p{
+    line-height: 2rem;
+}
+.coluna-bio{
+    margin-bottom: 2rem;
+}
+.endereco{
+    background-color: var(--cor-cinza-escuro)
+}
+#caixa-img-endereco{
+    background-color: var(--cor-preto)
+}
+.img-endereco-mini{
+    background-color: var(--cor-verde-claro)
+}
+.whats{
+    background-color: var(--cor-verde-escuro)
+}
+.ig{
+    background-color: var(--cor-roxo) 
+}
+.linha{
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    transition: all ease-in-out .2s;
+}
+
+.linha:hover{
+    transform: scale(1.025);
+}
+
+.linha a{
+    color: white;
+    flex: 6;    
+    padding-left: 1rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+footer{
+    width: 100%;
+}
+.caixa-img{
+    align-items: center;
+    box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.caixa-img img{
+    height: 1.5rem;
+}
+@media screen and (min-width: 960px){
+    header{
+        align-items: flex-start;
+        display: grid;
+        grid-template: "titulo nome  perfil";
+        grid-template-columns: auto auto 30vw;
+        height: 180px; 
+    }
+
+    #titulo{
+        grid-area: titulo;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    #perfil{
+        background: url(../img/profile.jpg) no-repeat no-repeat center center;
+        background-attachment: fixed;
+        background-size: 50%;
+        background-position: right top;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+        grid-area: perfil;
+        min-height: 60vh;        
+        position: fixed;
+        right: 0;
+        width: 30vw;
+    }
+
+    #perfil img{
+        min-width: 500px;
+    }
+
+    #nome{
+        align-items: flex-end;
+        grid-area: nome;
+        height: auto;
+        padding-top: 2rem;
+        padding-right: 2rem;   
+    }
+
+    #bio{
+        width: 70vw;
+    }
+
+    footer{
+        bottom: 0;
+        box-shadow: 0px 20px 10px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;    
+        height: 30vh;   
+        position: fixed;        
+        width: 30vw;  
+        right: 0; 
+    }
+
+    footer .linha{
+        flex: 1;
+    }
+}
